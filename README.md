@@ -1,6 +1,6 @@
 # vence-parking — a demo app by Viktor Daróczi
 
-This is a simple demonstation application.
+This is a simple demonstation application written in AngularJS.
 
 
 ## Getting Started
