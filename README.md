@@ -5,7 +5,7 @@ This is a simple demonstation application.
 
 ## Getting Started
 
-To get you started you can simply clone the angular-seed repository and install the dependencies:
+To get you started you can simply clone the repository and install the dependencies:
 
 
 ### Install Dependencies
