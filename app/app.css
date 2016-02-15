@@ -1,0 +1,250 @@
+/* app css stylesheet */
+
+body {
+  background-color: #ffffff;
+  color: #363534;
+  border-top: 1em solid #363534;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  padding-left: 0.5em;
+  overflow: hidden;
+}
+
+main > header {
+  padding: 0.5em;
+  border-bottom: 1px solid #ededed;
+}
+
+main > header > span.nav-icon {
+  color: #118dd5;
+  font-size: 1.5em;
+  margin: 0.2em;
+}
+
+main > header > h2 {
+  display: inline;
+  margin-left: 0.5em;
+  font-weight: 400;
+}
+
+section.view {
+  margin-top: 0.8em;
+}
+
+#filters {
+  margin-top: 0.35em;
+  margin-bottom: 1em;
+}
+
+section.form {
+  line-height: 2.2em;
+}
+
+input {
+  font-size: 1em;
+  color: #9b4a0f;
+  background: #fff1e7;
+  border: 0 none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+.search {
+  position: relative;
+  font-size: 1em;
+  padding-left: 5px;
+}
+
+.search input { text-indent: 1em;}
+
+.search .fa-search {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  color: #9b4a0f;
+}
+
+#filters > .filter-head {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul.filter {
+  margin: 0;
+  padding-left: 40px;
+}
+
+.filter > li {
+  color: #9b4a0f;
+  cursor: pointer;
+}
+
+.filter > li.selected {
+  font-weight: bold;
+}
+
+#content {
+  margin-top: 0;
+}
+
+#licence {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.control {
+  color: #118dd5;
+}
+
+.inline-container {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+  margin-left: 0.5em;
+}
+
+#formsubmit {
+  display: inline-block;
+}
+
+input:disabled {
+  background-color: #ededed;
+}
+
+div.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+  width: 100%;
+}
+
+div.pagination > div {
+  display: inline;
+}
+
+div.pagination div.vertical {
+  display: inline-block;
+  text-align: right;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+div.pagination > div > span.vertical-item {
+  height: 1.2em;
+}
+
+div.pagination div.big {
+  font-size: 2.9em;
+  height: 2em;
+  font-weight: 600;
+}
+
+div.pagination div.total {
+  color: #afafaf;
+  margin-left: -0.15em;
+}
+
+div.pagination div.head {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 2em;
+  position: relative;
+  top: -1.25em;
+}
+
+div.pagination div.button {
+  display: inline;
+  font-size: 3em;
+}
+
+div.pagination > div a {
+  color: #118dd5;
+  text-decoration: none;
+  height: 2em;
+}
+
+div.pagination div.disabled a {
+  color: #ededed;
+}
+
+ul.location {
+  margin: 0;
+  padding: 0;
+}
+
+ul.location li {
+  margin: 0;
+  margin-top: 0.5em;
+  padding: 0.5em 3em 0.5em 4em;
+  background-color: #ededed;
+  list-style-type: none;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 40em) {
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #filters {
+    float: left;
+    width: 25%;
+  }
+
+  #content {
+    float: left;
+    width: 75%;
+  }
+
+  #licence {
+    margin-top: 0;
+  }
+
+  #radio-container {
+    margin-top: 0;
+  }
+
+  #topic {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  input[type="text"] {
+    width: auto;
+  }
+
+  .search {
+    padding-left: 40px;
+  }
+
+  .search .fa-search {
+    left: 45px;
+  }
+
+  #radio-container {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+  }
+
+}

@@ -1,0 +1,16 @@
+<div class="pagination" ng-if="1 < pages.length || !autoHide">
+    <div class="vertical"><span class="vertical-item">{{ range.lower }}</span><br /><span class="vertical-item">{{ range.upper }}</span></div>
+    <div class="slash big">/</div>
+    <div class="total big">{{ range.total }}</div>
+    <div class="head">Vehicles</div>
+
+    <div class="inline-container">
+    <div class="button" ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }">
+        <a href="" ng-click="setCurrent(pagination.current - 1)"><i class="fa fa-angle-up fa-fw"></i></a>
+    </div>
+
+    <div class="button" ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }">
+        <a href="" ng-click="setCurrent(pagination.current + 1)"><i class="fa fa-angle-down fa-fw"></i></a>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<sidebar id="filters">
+    <div class="search">
+        <span class="fa fa-search"></span>
+        <input type="text" id="filter-text" ng-model="filtertext" autofocus />
+    </div>
+    <div class="filter-head">Levels</div>
+    <ul class="filter fa-ul">
+        <li
+            ng-repeat="f in levelFilters"
+            ng-click="toggleLevelFilter($index)"
+            ng-class="levelFilters[$index].class"
+        ><i class="fa-li fa fa-circle"></i>{{ f.level.getFloor() }}</li>
+    </ul>
+
+    <div class="filter-head">Type</div>
+    <ul class="filter fa-ul">
+        <li
+            ng-repeat="f in typeFilters"
+            ng-click="toggleTypeFilter($index)"
+            ng-class="typeFilters[$index].class"
+        ><i class="fa-li fa fa-circle"></i>{{ f.type }}</li>
+    </ul>
+</sidebar>
+
+<div id="content">
+    <section id="topic">
+        <section class="form">
+            <form id="request-form" name="requestform" ng-submit="requestform.$valid && requestEntry()">
+                <input type="text" id="licence" placeholder="Enter licence number" ng-model="vehicle.licence" ng-disabled="saving" required="required" />
+                <div id="radio-container" class="inline-container">
+                    <label ng-repeat="f in typeFilters"><input type="radio" name="vtype" id="vtype{{$index}}" ng-model="vehicle.type" ng-disabled="saving" ng-value="f.type" required="required" />
+                    {{ f.type }}</label>
+                </div>
+                <input id="formsubmit" type="submit" value="Request Entry" ng-disabled="!requestform.$valid || saving" />
+            </form>
+        </section>
+
+        <article id="list">
+            <dir-pagination-controls template-url="view1/dirPagination.tpl.html" auto-hide="false"></dir-pagination-controls>
+            <ul class="location">
+                <li
+                    dir-paginate="l in lot.getUsedPlaces() | userFilter : levelFilters : typeFilters : filtertext | itemsPerPage : 10"
+                ><span style="float:left">{{ l.vehicle.getLicence() }}</span>
+                    <span style="float:right;">{{ l.level.getFloor() }}</span>
+                    <span style="float:left; clear:left;">{{ l.vehicle.getType() }}</span>
+                    <span style="float:right; clear:right;">Slot: {{ l.place.getId() }}</span></li>
+            </ul>
+        </article>
+    </section>
+</div>

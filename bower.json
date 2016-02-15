@@ -1,0 +1,34 @@
+{
+  "name": "vence-parking",
+  "description": "A demo app by Viktor Daróczi",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0",
+    "angular-utils-pagination": "~0.10.0"
+  },
+  "authors": [
+    "Viktor Daróczi <viktor.daroczi@gmail.com>"
+  ],
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "demo"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ]
+}
